@@ -57,8 +57,8 @@ PRODUCT_PACKAGES += \
 # API Level
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-# Inherit from oneplus sm8250-common
-$(call inherit-product, device/oneplus/sm8250-common/common.mk)
+# Inherit from oneplus instantnoodlep-common
+$(call inherit-product, device/oneplus/instantnoodlep-common/common.mk)
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/oneplus/instantnoodlep/instantnoodlep-vendor.mk)
