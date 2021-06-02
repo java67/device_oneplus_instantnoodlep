@@ -24,10 +24,15 @@ $(call inherit-product, device/oneplus/instantnoodlep/device.mk)
 # Inherit some common PixelExperience stuff.
 $(call inherit-product, vendor/dot/config/common.mk)
 
+# Display
+TARGET_SCREEN_DENSITY := 420
+
 TARGET_BOOT_ANIMATION_RES := 1440
-
 TARGET_GAPPS_ARCH := arm64
-
+WITH_GAPPS := true
+DOT_BUILD_TYPE := GAPPS
+TARGET_USES_FACE_UNLOCK := true
+#DOT_BUILD_TYPE := Official
 TARGET_SUPPORTS_BLUR := true
 EXTRA_FOD_ANIMATIONS := true
 
