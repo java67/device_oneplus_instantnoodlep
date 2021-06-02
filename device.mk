@@ -25,7 +25,7 @@
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-aosp
+    $(LOCAL_PATH)/overlay-dot
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -41,8 +41,7 @@ PRODUCT_COPY_FILES += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.recovery.target.rc
+    fstab.qcom 
 
 # OPFeature
 PRODUCT_COPY_FILES += \
@@ -52,6 +51,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.oneplus_kona
 
+# Wifi Overlay
+PRODUCT_PACKAGES += \
+    OnePlus8PWifiOverlay
 # API Level
 PRODUCT_SHIPPING_API_LEVEL := 29
 
