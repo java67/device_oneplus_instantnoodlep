@@ -26,7 +26,6 @@ $(call inherit-product, vendor/dot/config/common.mk)
 TARGET_SCREEN_DENSITY := 420
 WITH_GAPPS := true
 TARGET_BOOT_ANIMATION_RES := 1440
-DOT_BUILD_TYPE := GAPPS
 TARGET_GAPPS_ARCH := arm64
 TARGET_USES_FACE_UNLOCK := true
 TARGET_SUPPORTS_BLUR := true
