@@ -25,15 +25,15 @@
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-dot
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 3168
-TARGET_SCREEN_WIDTH := 1440
+#TARGET_SCREEN_HEIGHT := 3168
+#TARGET_SCREEN_WIDTH := 1440
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -52,10 +52,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.oneplus_kona
 
+# Wifi Overlay
+PRODUCT_PACKAGES += \
+    OnePlus8PWifiOverlay
+# API Level
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-# Inherit from oneplus sm8250-common
-$(call inherit-product, device/oneplus/sm8250-common/common.mk)
+# Inherit from oneplus instantnoodlep-common
+$(call inherit-product, device/oneplus/instantnoodlep-common/common.mk)
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/oneplus/instantnoodlep/instantnoodlep-vendor.mk)

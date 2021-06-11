@@ -21,14 +21,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from instantnoodlep device
 $(call inherit-product, device/oneplus/instantnoodlep/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-PRODUCT_NAME := lineage_instantnoodlep
+# Inherit some common DotOS stuff.
+$(call inherit-product, vendor/dot/config/common.mk)
+TARGET_SCREEN_DENSITY := 420
+WITH_GAPPS := true
+TARGET_BOOT_ANIMATION_RES := 1440
+DOT_BUILD_TYPE := GAPPS
+TARGET_GAPPS_ARCH := arm64
+TARGET_USES_FACE_UNLOCK := true
+TARGET_SUPPORTS_BLUR := true
+EXTRA_FOD_ANIMATIONS := true
+PRODUCT_NAME := dot_instantnoodlep
 PRODUCT_DEVICE := instantnoodlep
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := IN2023
+PRODUCT_MODEL := IN2025
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 

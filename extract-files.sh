@@ -15,7 +15,7 @@ fi
 set -e
 
 export DEVICE=instantnoodlep
-export DEVICE_COMMON=sm8250-common
+export DEVICE_COMMON=instantnoodlep-common
 export VENDOR=oneplus
 
 "./../../${VENDOR}/${DEVICE_COMMON}/extract-files.sh" "$@"

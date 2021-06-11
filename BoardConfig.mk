@@ -14,10 +14,13 @@
 # limitations under the License.
 #
 
-# Inherit from oneplus sm8250-common
--include device/oneplus/sm8250-common/BoardConfigCommon.mk
+# Inherit from oneplus instantnoodlep-common
+-include device/oneplus/instantnoodlep-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/oneplus/instantnoodlep
+
+# Display
+TARGET_SCREEN_DENSITY := 560
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
@@ -34,11 +37,6 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Partitions
-ifneq ($(WITH_GMS),true)
-BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1156055040
-BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 660602880
-BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 660602880
-endif
 BOARD_ONEPLUS_DYNAMIC_PARTITIONS_SIZE := 7511998464
 BOARD_SUPER_PARTITION_SIZE := 15032385536
 
