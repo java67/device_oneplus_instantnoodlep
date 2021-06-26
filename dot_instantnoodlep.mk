@@ -24,7 +24,6 @@ $(call inherit-product, device/oneplus/instantnoodlep/device.mk)
 # Inherit some common DotOS stuff.
 $(call inherit-product, vendor/dot/config/common.mk)
 TARGET_SCREEN_DENSITY := 420
-WITH_GAPPS := true
 TARGET_BOOT_ANIMATION_RES := 1440
 TARGET_GAPPS_ARCH := arm64
 TARGET_USES_FACE_UNLOCK := true
